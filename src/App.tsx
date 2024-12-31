@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react'; // Removed default 'React' import
 import Header from './components/Header';
 import Home from './components/Home';
 import About from './components/About';
@@ -39,9 +39,7 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col bg-orange-50">
       <Header setCurrentPage={setCurrentPage} />
-      <main className="flex-grow">
-        {renderPage()}
-      </main>
+      <main className="flex-grow">{renderPage()}</main>
       <Footer />
     </div>
   );
